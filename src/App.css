@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+p{
+  font-size: 25px;
+  transition: 1s;
+}
+
+p:hover{
+  font-size: 30px;
+  color: rgb(10, 243, 127);
+}
