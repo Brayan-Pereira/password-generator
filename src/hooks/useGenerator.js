@@ -1,18 +1,17 @@
 import { useState } from "react";
 
-export default function Generator() {
+export default function Generator(passwordSize) {
     const [senha, setSenha] = useState("")
     const caracters = "1234567890qwertyuiopasdfghjklçzxcvbnmQWERTYUIOPASDFGHJKLÇZXCVBNM"
     let copiar = ""
     const gerar = () => {
         let valorAleatorio = ""
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < passwordSize; i++) {
             valorAleatorio += caracters[(Math.floor(Math.random() * caracters.length))]
         }
         setSenha(valorAleatorio)
         setStatusbtn("Copiar")
     }
-
     const [statusbtn, setStatusbtn] = useState("Copiar")
     const btnCop = () => { 
         if (statusbtn === "Copiar" && senha !== "") {
@@ -29,6 +28,5 @@ export default function Generator() {
         }
         setStatusbtn(copiar)
     }
-
     return { senha, gerar, statusbtn, btnCop }
 }

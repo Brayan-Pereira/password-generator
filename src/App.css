@@ -14,3 +14,12 @@ p:hover{
   font-size: 30px;
   color: rgb(10, 243, 127);
 }
+
+.form{
+  padding-bottom: 1.5rem;
+}
+
+label{
+  font-size: 20px;
+  margin-right: 0.5rem;
+}
